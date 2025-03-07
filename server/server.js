@@ -4,7 +4,7 @@ const app = express() ;
 dotenv.config() ;
 
 
-app.get('/' , ()=>{
+app.get('/' , (req,res)=>{
     res.send('homepage')
 })
 
