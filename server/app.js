@@ -3,7 +3,7 @@ import dotenv from 'dotenv' ;
 const app = express() ;
 dotenv.config() ;
 
-
+console.log('hello')
 app.get('/' , (req,res)=>{
     res.send('homepage')
 })
