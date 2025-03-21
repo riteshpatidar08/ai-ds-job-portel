@@ -21,6 +21,8 @@ const userSchema = new mongoose.Schema({
         duration: { type: String },
       },
     ],
+    skills : [String] ,
+    resume : {type : String}
   },
   recruiter: {
     companyName: { type: String },

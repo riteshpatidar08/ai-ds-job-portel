@@ -2,6 +2,7 @@ import express from 'express';
 import dotenv from 'dotenv';
 import config from './config/config.js';
 import dbConnect from './config/dbConnect.js';
+import authRoutes from './routes/auth.routes.js'
 const app = express();
 dotenv.config();
 
@@ -10,6 +11,10 @@ dbConnect();
 app.get('/', (req, res) => {
   res.send('homepage');
 });
+
+app.use('/api/auth', authRoutes) ;
+//NOTE complete path will be like this register localhost:3000/api/auth/register
+
 
 app.listen(config.app.PORT || 3000, () => {
   console.log(`Server is running ${config.app.PORT}`);
