@@ -3,8 +3,10 @@ import express from 'express'
 import { register } from '../controllers/auth.controller.js';
 
 //NOTE separate router creation for the authencation module
+
+import upload from '../middleware/upload.js'
 const router = express.Router();
 
-router.post('/register',register) ;
+router.post('/register', upload.single('resume') ,register) ;
 
 export default router ;

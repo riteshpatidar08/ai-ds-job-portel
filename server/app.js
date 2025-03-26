@@ -7,7 +7,7 @@ const app = express();
 dotenv.config();
 
 dbConnect();
-
+app.use(express.json())
 app.get('/', (req, res) => {
   res.send('homepage');
 });

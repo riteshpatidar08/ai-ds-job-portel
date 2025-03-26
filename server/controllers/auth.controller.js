@@ -1,3 +1,3 @@
-export const register = () => {
-
+export const register = (req,res) => {
+console.log(req.file)
 }
