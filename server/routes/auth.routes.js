@@ -7,8 +7,9 @@ import { postJob, register } from '../controllers/auth.controller.js';
 import upload from '../middleware/upload.js'
 import { verifyToken } from '../middleware/verify.js';
 const router = express.Router();
-
+import checkRole from '../middleware/checkRole.js';
 router.post('/register', upload.single('resume') ,register) ;
 
-router.post('/job',verifyToken ,postJob)
+router.post('/job',verifyToken , checkRole('recruiter'),postJob)
+
 export default router ;

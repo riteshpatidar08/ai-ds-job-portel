@@ -16,7 +16,7 @@ import jwt from 'jsonwebtoken'
 const token = jwt.sign({
     userId : '123',
     name : 'rish',
-    role : "jobseeker"
+    role : "recruiter"
 },"hello-this-isSecret" ,{expiresIn : "7d"})
 
 

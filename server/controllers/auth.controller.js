@@ -3,7 +3,7 @@ const data = req.body ;
 
 }
 export const postJob = (req,res)=>{
-    console.log('runnning')
+  console.log(req.user)
 }
 
 
